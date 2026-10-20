@@ -100,6 +100,9 @@ TriRoute converts a travel priority into a weighted score and uses a min-heap to
 - **Environment**: PowerShell, Command Prompt, or any terminal.
 
 ### Compile
+
+
+### Run
 *(Confirm the exact compile line against your actual `main.cpp` includes — if any file doesn't compile standalone yet, say so and I'll adjust.)*
 
 ---
