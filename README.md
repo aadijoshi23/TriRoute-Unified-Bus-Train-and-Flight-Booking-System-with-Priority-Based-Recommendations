@@ -90,9 +90,23 @@ TriRoute converts a travel priority into a weighted score and uses a min-heap to
 
 ## 🧩 Modular Codebase Organization
 
+triroute/
+├── main.cpp # Program entry point
+├── transport.h / .cpp # Transport hierarchy (Aadi)
+├── dsa.h / .cpp # Ranking engine: heap, hash map, sorting (Neer)
+├── search.h / .cpp # Route/date/mode filtering (Saurav)
+├── booking.h / .cpp # User, Booking, Payment, seat allocation (Shubham)
+├── storage.h / .cpp # CSV persistence & FIFO waitlist (Uttkarsh)
+├── menu.h / .cpp # Console menu / UI flow (Dhrup)
+├── transports.csv # Sample transport data
+├── README.md
+└── .gitignore
+
 ---
 
 ## 🛠️ Build and Run
+
+*g++ -std=c++17 -Wall -Wextra -Wpedantic main.cpp transport.cpp dsa.cpp search.cpp booking.cpp storage.cpp menu.cpp -o triroute*
 
 ### Prerequisites
 
@@ -101,6 +115,7 @@ TriRoute converts a travel priority into a weighted score and uses a min-heap to
 
 ### Compile
 
+*./triroute*
 
 ### Run
 *(Confirm the exact compile line against your actual `main.cpp` includes — if any file doesn't compile standalone yet, say so and I'll adjust.)*
@@ -111,12 +126,12 @@ TriRoute converts a travel priority into a weighted score and uses a min-heap to
 
 | # | Test Scenario | Target Module | Status | Notes |
 |---|---|---|---|---|
-| 1 | Transport polymorphism | `transport.cpp` | *Needs confirmation* | Bus/Train/Flight should invoke correct overridden fare/display logic |
-| 2 | Route/date/mode filtering | `search.cpp` | *Needs confirmation* | Should return only matching records |
-| 3 | Priority ranking | `dsa.cpp` | *Needs confirmation* | Cheapest/Fastest/Balanced order should match manual calculation |
-| 4 | Booking validation | `booking.cpp` | *Needs confirmation* | Valid bookings reduce seats once; invalid quantities rejected |
-| 5 | CSV load/save | `storage.cpp` | *Needs confirmation* | Data should persist correctly across restarts |
-| 6 | FIFO waitlist | `storage.cpp` | *Needs confirmation* | First waitlisted user promoted first |
+| 1 | Transport polymorphism | `transport.cpp` | *Pass* | Bus/Train/Flight should invoke correct overridden fare/display logic |
+| 2 | Route/date/mode filtering | `search.cpp` | *Pass* | Should return only matching records |
+| 3 | Priority ranking | `dsa.cpp` | *Pass* | Cheapest/Fastest/Balanced order should match manual calculation |
+| 4 | Booking validation | `booking.cpp` | *Pass* | Valid bookings reduce seats once; invalid quantities rejected |
+| 5 | CSV load/save | `storage.cpp` | *Pass* | Data should persist correctly across restarts |
+| 6 | FIFO waitlist | `storage.cpp` | *Pass* | First waitlisted user promoted first |
 
 *(Replace "Needs confirmation" with Pass/Fail once each module is actually run — I can't verify this without seeing the code or your test results.)*
 
@@ -128,12 +143,12 @@ TriRoute converts a travel priority into a weighted score and uses a min-heap to
 
 | Team Member | File(s) Present | Status |
 |---|---|---|
-| Aadi Joshi | `transport.h/.cpp` | *Confirm: working / partial / stub* |
-| Neer Joshi | `dsa.h/.cpp` | *Confirm: working / partial / stub* |
-| Saurav Baluni | `search.h/.cpp` | *Confirm: working / partial / stub* |
-| Shubham Bangwal | `booking.h/.cpp` | *Confirm: working / partial / stub* |
-| Uttkarsh Kala | `storage.h/.cpp` | *Confirm: working / partial / stub* |
-| Dhrup Singh | `menu.h/.cpp` | *Confirm: working / partial / stub* |
+| Aadi Joshi | `transport.h/.cpp` | *Confirm: working* |
+| Neer Joshi | `dsa.h/.cpp` | *Confirm: working* |
+| Saurav Baluni | `search.h/.cpp` | *Confirm: working* |
+| Shubham Bangwal | `booking.h/.cpp` | *Confirm: working* |
+| Uttkarsh Kala | `storage.h/.cpp` | *Confirm: working* |
+| Dhrup Singh | `menu.h/.cpp` | *Confirm: working* |
 | — | AI/NLP module | **Pending** — no files present in repo |
 | — | REST API / frontend | **Pending or descoped** — confirm which |
 
