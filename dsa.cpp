@@ -2,16 +2,19 @@
 #include <cstring>
 using namespace std;
 
+//hash function
 static int hashId(const char* id) {
     unsigned int hash = 0;
     for (int i = 0; id[i] != '\0'; i++) hash = (hash * 31 + (unsigned char)id[i]) % 211;
     return (int)hash;
 }
 
+//constructor
 RankingEngine::RankingEngine() : heapSize(0), inventory(nullptr) {
     for (int i = 0; i < 211; i++) hashTable[i] = -1;
 }
 
+//linear probing
 void RankingEngine::buildIndex(const TransportInventory& data) {
     inventory = &data;
     for (int i = 0; i < 211; i++) hashTable[i] = -1;
@@ -22,6 +25,7 @@ void RankingEngine::buildIndex(const TransportInventory& data) {
     }
 }
 
+//lookup function
 Transport* RankingEngine::lookup(const char* id) const {
     if (!inventory) return nullptr;
     int slot = hashId(id);
@@ -33,12 +37,14 @@ Transport* RankingEngine::lookup(const char* id) const {
     return nullptr;
 }
 
+//MIN-HEAP
 bool RankingEngine::better(const HeapNode& a, const HeapNode& b) const {
     if (a.score != b.score) return a.score < b.score;
     return strcmp(inventory->at(a.inventoryIndex)->getId(),
                   inventory->at(b.inventoryIndex)->getId()) < 0;
 }
 
+//heapify up
 void RankingEngine::push(const HeapNode& node) {
     int i = heapSize++;
     heap[i] = node;
@@ -50,6 +56,7 @@ void RankingEngine::push(const HeapNode& node) {
     }
 }
 
+//heapify down
 HeapNode RankingEngine::pop() {
     HeapNode answer = heap[0];
     heap[0] = heap[--heapSize];
@@ -65,6 +72,7 @@ HeapNode RankingEngine::pop() {
     return answer;
 }
 
+//rank function
 int RankingEngine::rank(const TransportInventory& data, const int matches[],
                         int count, int priority, int orderedIndices[]) {
     if (count <= 0) return 0;

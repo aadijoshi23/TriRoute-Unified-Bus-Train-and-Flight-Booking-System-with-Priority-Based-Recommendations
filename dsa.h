@@ -3,7 +3,7 @@
 
 #include "transport.h"
 
-// Aadi: manual min-heap, hash table and selection sort. No STL.
+
 struct HeapNode {
     double score;
     int inventoryIndex;
