@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/assets/gehu_logo.png" alt="Graphic Era Hill University Logo" width="260"/>
+  <img src="docs/logogehu.png" alt="Graphic Era Hill University Logo" width="260"/>
 </p>
 
 # TriRoute: Unified Bus, Train & Flight Booking System
