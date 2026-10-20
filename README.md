@@ -90,18 +90,27 @@ TriRoute converts a travel priority into a weighted score and uses a min-heap to
 
 ## 🧩 Modular Codebase Organization
 
+```
 triroute/
-├── main.cpp # Program entry point
-├── transport.h / .cpp # Transport hierarchy (Aadi)
-├── dsa.h / .cpp # Ranking engine: heap, hash map, sorting (Neer)
-├── search.h / .cpp # Route/date/mode filtering (Saurav)
-├── booking.h / .cpp # User, Booking, Payment, seat allocation (Shubham)
-├── storage.h / .cpp # CSV persistence & FIFO waitlist (Uttkarsh)
-├── menu.h / .cpp # Console menu / UI flow (Dhrup)
-├── transports.csv # Sample transport data
+├── docs/                 # Logo and team member photos
+│   ├── gehu_logo.png
+│   ├── aadi_joshi.jpg
+│   ├── neer_joshi.jpg
+│   ├── saurav_baluni.jpg
+│   ├── shubham_bangwal.jpg
+│   ├── uttkarsh_kala.jpg
+│   └── dhrup_singh.jpg
+├── main.cpp               # Program entry point
+├── transport.h / .cpp     # Transport hierarchy (Aadi)
+├── dsa.h / .cpp           # Ranking engine: heap, hash map, sorting (Neer)
+├── search.h / .cpp        # Route/date/mode filtering (Saurav)
+├── booking.h / .cpp       # User, Booking, Payment, seat allocation (Shubham)
+├── storage.h / .cpp       # CSV persistence & FIFO waitlist (Uttkarsh)
+├── menu.h / .cpp          # Console menu / UI flow (Dhrup)
+├── transports.csv         # Sample transport data
 ├── README.md
 └── .gitignore
-
+```
 ---
 
 ## 🛠️ Build and Run
