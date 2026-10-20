@@ -1,0 +1,19 @@
+id,mode,source,destination,date,departure_time,duration_minutes,fare_rupees,total_seats,available_seats,attribute
+TRB001,bus,Dehradun,Delhi,2027-01-15,08:00,360,650,40,40,AC Sleeper
+TRB002,bus,Dehradun,Delhi,2027-01-15,06:00,420,480,36,36,Non-AC Seater
+TRB003,bus,Delhi,Mumbai,2027-01-16,17:00,840,1500,42,42,AC Sleeper
+TRB004,bus,Mumbai,Bengaluru,2027-01-17,16:30,960,1700,38,38,Volvo Multi-Axle
+TRB005,bus,Delhi,Jaipur,2027-01-15,07:15,300,550,44,44,AC Seater
+TRB006,bus,Dehradun,Lucknow,2027-01-18,19:00,540,900,40,40,Sleeper
+TRT001,train,Dehradun,Delhi,2027-01-15,05:30,330,450,120,120,Chair Car
+TRT002,train,Dehradun,Delhi,2027-01-15,07:00,270,850,72,72,AC First
+TRT003,train,Delhi,Mumbai,2027-01-16,16:00,960,1100,180,180,AC Three Tier
+TRT004,train,Mumbai,Bengaluru,2027-01-17,08:30,720,900,160,160,Sleeper
+TRT005,train,Delhi,Jaipur,2027-01-15,06:40,270,400,140,140,Chair Car
+TRT006,train,Dehradun,Lucknow,2027-01-18,21:10,480,700,150,150,AC Two Tier
+TRF001,flight,Dehradun,Delhi,2027-01-15,10:30,60,3500,80,80,Campus Air
+TRF002,flight,Dehradun,Delhi,2027-01-15,13:00,75,2800,72,72,Sample Wings
+TRF003,flight,Delhi,Mumbai,2027-01-16,09:20,120,4500,150,150,DemoJet
+TRF004,flight,Mumbai,Bengaluru,2027-01-17,11:45,105,4200,144,144,Campus Air
+TRF005,flight,Delhi,Jaipur,2027-01-15,15:10,50,2500,68,68,Sample Wings
+TRF006,flight,Dehradun,Lucknow,2027-01-18,12:25,70,3000,74,74,DemoJet
